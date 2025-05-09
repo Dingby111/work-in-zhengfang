@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            padding: 0 10px;
+        }
+
+        .seller-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .seller-avatar {
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            margin-right: 10px;
+        }
+
+        .follow {
+            cursor: pointer;
+            color: blue;
+        }
+
+        .product-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .left-details {
+            flex: 1;
+        }
+
+        .right-details {
+            flex: 3;
+        }
+
+        .action-buttons {
+            cursor: pointer;
+            color: blue;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .search-bar input[type="text"] {
+            width: 200px;
+        }
+
+        /* Additional styles here */
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div>
+            <a href="#" class="external">二手巷首页</a>
+            <a href="#" class="external">登录</a>
+            <a href="#" class="external">免费注册</a>
+        </div>
+        <div>
+            <a href="#" class="external">我</a>
+            <a href="#" class="external">消息</a>
+            <a href="#" class="external">收藏</a>
+            <a href="#" class="external">联系客服</a>
+            <a href="#" class="external">发布</a>
+        </div>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="搜索你想要的商品">
+        <button onclick="search()">搜索</button>
+    </div>
+
+    <div class="product-details">
+        <div class="left-details">
+            <!-- Placeholder for product details -->
+        </div>
+        <div class="right-details">
+            <div>商家头像</div>
+            <img src="#" alt="商家头像" class="seller-avatar">
+            <div class="action-buttons">
+                <div onclick="addToCart()">收藏</div>
+                <div onclick="addToCart()">加入购物车</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="seller-info">
+        <div class="seller-avatar"><!-- Insert image here --></div>
+        <div>
+            <div>商家昵称</div>
+            <div class="follow" onclick="follow()">+关注</div>
+            <div>成色 (全新未拆封)</div>
+            <div>38浏览</div>
+        </div>
+    </div>
+
+    <script>
+        function follow() {
+            // Add your JavaScript code to follow the seller
+            window.location.href = '#'; // Replace with your link to follow the seller
+        }
+
+        function addToCart() {
+            // Add your JavaScript code to add to cart
+            window.location.href = '#'; // Replace with your link to add to cart
+        }
+
+        function search() {
+            // Add your JavaScript code to handle search
+            window.location.href = '#'; // Replace with your link to perform search
+        }
+
+        // Add event listeners for external links
+        document.querySelectorAll('.external').forEach(function (element) {
+            element.addEventListener('click', function () {
+                window.location.href = this.getAttribute('href');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LZU Second Hand Alley</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar li {
+            padding: 5px 10px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .item-image {
+            width: 100px;
+            height: auto;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            box-sizing:
+                border-box;
+        }
+
+        .item-description {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-width: 1px 2px 3px 4px;
+            width: 200px;
+        }
+
+        /* Dropdown button style */
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Container for dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Hidden dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            /* 确保有足够的宽度 */
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+
+        /* Links inside dropdown */
+        .dropdown-content {
+            display: none;
+            bottom: 0;
+            position: absolute;
+            right: 1px;
+            /* Align to the right edge of the dropdown container */
+            background-color: #f9f9f9;
+            white-space: nowrap;
+            /* Keep dropdown content in one line */
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        /* Show the dropdown menu on click */
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<h3>兰大二手巷</h3>
+<h3>LZU Second Hand Alley</h3>
+
+<body>
+    <div class="navbar">
+        <div>
+            <ul>
+                <li>综合</li>
+                <li>商品</li>
+                <li>分享</li>
+                <li>用户</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>我</li>
+                <li>消息</li>
+                <li>收藏</li>
+                <li>联系客服</li>
+                <li>发布</li>
+            </ul>
+            <!-- Dropdown structure -->
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">更多</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">生活用品</a>
+                    <a href="#">学习资料</a>
+                    <a href="#">支持面交</a>
+                    <a href="#">模玩周边</a>
+                    <a href="#">户外运动</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="content">
+        <div>
+            <div class="item-description">
+                <p>
+                    < img src="your-image-url.jpg" alt="Item Image" class="item-image">
+                </p>
+                <p>这里是商品描述...</p>
+                <p>¥120</p>
+                <p>40人想要</p>
+            </div>
+        </div>
+        <!-- Other items would go he -->
+    </div>
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
